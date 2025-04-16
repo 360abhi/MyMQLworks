@@ -1,0 +1,24 @@
+
+
+for(int i=PositionsTotal()-1;i>=0;i--){
+    ulong posTicket = PositiongetTicket(i);
+    if(PositionSelectByTicket(posTicket)){
+        double posOpenprice = PositionGetDouble(POSITION_PRICE_OPEN);
+        double posVolumne = PositionGetDouble(POSITION_VOLUMNE);
+        ENUM_POSITION_TYPE posType = (ENUM_POSITION_TYPE)PositionGetInteger(POSITION_TYPE);
+
+        if(posType == POSITION_TYPE_BUY){
+            if(bid>posOpenprice + PartialClosePoints * _Point){
+                // verifying we are doing this only one time
+                if(posVolumne == Lots){
+                    double lotsToClose = posVolumne *PartialCloseFactor;
+                    lotsToClose = NormalizeDouble(lotsToClose,2);
+
+                    if(trade.PositionClosePartial(posTicket,lotsToClose)){
+                        Print("Pos closed partially");
+                    }
+                }
+            }
+        }
+    }
+}

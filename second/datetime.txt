@@ -1,0 +1,36 @@
+
+input string TimeStart = "23:00"
+input string TimeEnd = "23:45"
+
+ontick(){
+    datetime timeStart = StringToTime(TimeStart);
+    datetime timeEnd = StringToTime(TimeEnd);
+
+    bool isTime  = TimeCurrent()>= timeStart && TimeCurrent() <= timeEnd
+}
+
+
+### 2nd method structtime
+
+timestarthour = input int
+timestartmin = input int
+timeendhour = input int
+timeendmin = input int
+
+ontick(){
+    MqlDateTime structTime;
+    TimeCurrent(structTime);
+    Print(structTime.hour,structTime.min);
+    // We can assign our value to this time curr structTime
+
+    structTime.hour = timestarthour;
+    structTime.min = timestartmin;
+    datetime timeStart = StructToTime(structTime);
+
+    structtime.hour = timeendhour;
+    structtime.min = timeendmin;
+    datetime endTime = StructToTime(structTime);
+
+    bool isTime = TimeCurrent() >= timeStart && TimeCurrent()<= timeEnd;
+
+}

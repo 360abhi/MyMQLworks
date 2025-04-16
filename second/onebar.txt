@@ -1,0 +1,13 @@
+
+int totalBars = 0;
+
+ontick(){
+    int bars = iBars(_Symbol,Timeframe);
+    if(totalBars != bars){
+        totalBars = bars;
+
+        // logic goes inside as this happens only once per bar
+        double bid = SymbolInfoDouble(_Symbol,SYMBOL_BID);
+        double ask = SymbolInfoDouble(_Symbol,SYMBOL_ASK);
+    }
+}

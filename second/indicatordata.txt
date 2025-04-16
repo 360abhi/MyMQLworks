@@ -1,0 +1,12 @@
+
+
+oninit(){
+    handlestoch = iStochastic(_symbol,timeframe,k,d,slowing,mode_sma,sto_lowhigh);
+
+}
+
+ontick(){
+    double stoch[];
+    CopyBuffer(handlestoch,MAIN_LINE,1,2,stoch);
+    //now stoch array stores the stochastic indicator values
+}
