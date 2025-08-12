@@ -7,8 +7,14 @@ ENTRY TIMEFRAME: 1MIN
 1) Determine the candle bias.
 2) Wait for manipulation straight after the opening of candle.
 3) Always buy below open and sell above open.'
-4) In the manipulation phase: Entry Criteria :  Three bar reversal or outside reversal or zigzag pattern [ mostly accompanied with a wick candle ]. / Entry Candle Body % > 75 and big body 
+4) In the manipulation phase: Entry Criteria : 
+: Three bar reversal or outside reversal or zigzag pattern [ mostly accompanied with a wick candle ]. / Entry Candle Body % > 75 and big body [ SV-2 ]
+: If wick touching S/R and engulfing body present, can take aggressive position. [ SV-1 ]
+
+
 5) Stop loss : lowest low of the last 3-5 candles.
 6) TP : Partials always at 1.25 , full at 2/2.5/3 : based on candle size and proximity of the wick to S/R.
+
+
 
 > Test entry : first wick candle in direction of bias, small entry with big reward
